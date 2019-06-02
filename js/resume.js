@@ -1,15 +1,23 @@
 (function($) {
-  "use strict"; // Start of use strict
+  'use strict'; // Start of use strict
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (
+      location.pathname.replace(/^\//, '') ==
+        this.pathname.replace(/^\//, '') &&
+      location.hostname == this.hostname
+    ) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top)
-        }, 1000, "easeInOutExpo");
+        $('html, body').animate(
+          {
+            scrollTop: target.offset().top
+          },
+          1000,
+          'easeInOutExpo'
+        );
         return false;
       }
     }
@@ -25,4 +33,11 @@
     target: '#sideNav'
   });
 
+  // Activate Bootstrap Lightbox
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox({
+      alwaysShowClose: true
+    });
+  });
 })(jQuery); // End of use strict

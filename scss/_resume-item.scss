@@ -3,8 +3,10 @@ section.resume-section {
   padding-bottom: 5rem !important;
   max-width: 75rem;
   .resume-item {
-    .resume-content {}
-    .resume-date {
+    .resume-content {
+    }
+    .resume-date,
+    .project-snapshot {
       min-width: none;
     }
   }
@@ -13,10 +15,14 @@ section.resume-section {
   section.resume-section {
     min-height: 100vh;
     .resume-item {
-      .resume-date {
+      .resume-date,
+      .project-snapshot {
         min-width: 18rem;
       }
     }
+  }
+  .project-snapshot {
+    margin-left: 3rem;
   }
 }
 @media (min-width: 992px) {
@@ -24,4 +30,9 @@ section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
+}
+
+.project-snapshot {
+  color: $black;
+  font-size: 0.9rem;
 }
