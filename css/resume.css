@@ -185,6 +185,21 @@ section.resume-section .resume-item .project-snapshot {
   font-size: 0.9rem;
 }
 
+section.recent-work-section {
+  max-width: unset !important;
+  padding-top: 0 !important;
+}
+
+.recent-work-wrap {
+  max-width: 75rem;
+}
+
+.recent-work-images-wrap {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 3rem;
+}
+
 .recent-work-images {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -195,7 +210,6 @@ section.resume-section .resume-item .project-snapshot {
 }
 
 .recent-work-images .main-thumbnail {
-  border: 1px solid #dee2e6;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -203,7 +217,6 @@ section.resume-section .resume-item .project-snapshot {
 }
 
 .recent-work-images .thumbnail {
-  border: 1px solid #dee2e6;
   grid-column-start: 4;
   grid-column-end: 5;
 }
