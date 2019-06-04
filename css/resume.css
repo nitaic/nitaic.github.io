@@ -5,9 +5,11 @@
  */
 
 body {
-  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'Source Sans Pro', sans-serif;
   padding-top: 54px;
-  color: #868e96;
+  color: #444;
+  line-height: 1.75rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 992px) {
@@ -23,15 +25,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: #343a40;
+  letter-spacing: -0.00391667em;
 }
 
 h1 {
-  font-size: 6rem;
-  line-height: 5.5rem;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 h2 {
@@ -43,15 +52,20 @@ h3 {
 }
 
 p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
+  font-size: 1.4rem;
+  color: #151515;
+  margin-bottom: 1.4rem;
 }
 
 .subheading {
   text-transform: uppercase;
-  font-weight: 500;
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.4rem;
+}
+
+.intro {
+  font-size: 1.125rem;
 }
 
 .social-icons a {
@@ -72,7 +86,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #BD5D38;
+  background-color: #bb002d;
 }
 
 .dev-icons {
@@ -80,7 +94,11 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: #bb002d;
+}
+
+#sideNav {
+  background: #bb002d;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -90,7 +108,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: #ff0944;
 }
 
 @media (min-width: 992px) {
@@ -117,9 +135,9 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    max-width: 9rem;
+    max-height: 9rem;
+    border: 0.3rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
@@ -181,13 +199,29 @@ section.resume-section .resume-item .project-snapshot {
 }
 
 .project-snapshot {
-  color: #000;
+  color: #151515;
   font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .project-snapshot {
+    margin-bottom: 2rem;
+  }
 }
 
 section.recent-work-section {
   max-width: unset !important;
   padding-top: 0 !important;
+}
+
+@media (max-width: 991px) {
+  section.recent-work-section .resume-item {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+    -ms-flex-direction: column-reverse !important;
+    flex-direction: column-reverse !important;
+  }
 }
 
 .recent-work-wrap {
@@ -197,7 +231,15 @@ section.recent-work-section {
 .recent-work-images-wrap {
   width: 100%;
   background-color: #f8f9fa;
-  padding: 3rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#f8f9fa));
+  background: linear-gradient(to top, #ffffff 0%, #f8f9fa 100%);
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 992px) {
+  .recent-work-images-wrap {
+    padding: 4rem 3rem 0.5rem;
+  }
 }
 
 .recent-work-images {
@@ -207,6 +249,25 @@ section.recent-work-section {
   grid-auto-flow: row;
   grid-row-gap: 10px;
   grid-column-gap: 20px;
+}
+
+@media (min-width: 992px) {
+  .recent-work-images {
+    margin-top: 2.5rem;
+  }
+}
+
+.recent-work-images img {
+  -webkit-box-shadow: 0 4px 16px #00000035;
+  box-shadow: 0 4px 16px #00000035;
+  border: 1px solid #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.recent-work-images img:hover {
+  -webkit-box-shadow: 0 0 10px #00000055;
+  box-shadow: 0 0 10px #00000055;
 }
 
 .recent-work-images .main-thumbnail {
@@ -401,17 +462,17 @@ section.recent-work-section {
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: #bb002d !important;
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: #bb002d !important;
 }
 
 a {
-  color: #BD5D38;
+  color: #bb002d;
 }
 
 a:hover, a:focus, a:active {
-  color: #824027;
+  color: #6f001b;
 }

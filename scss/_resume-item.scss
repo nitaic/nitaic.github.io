@@ -35,4 +35,9 @@ section.resume-section {
 .project-snapshot {
   color: $black;
   font-size: 0.9rem;
+  line-height: 1.2rem;
+  //font-weight: 600;
+  @media (max-width: 991px) {
+    margin-bottom: 2rem;
+  }
 }

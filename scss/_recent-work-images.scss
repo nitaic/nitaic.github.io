@@ -1,6 +1,12 @@
 section.recent-work-section {
   max-width: unset !important;
   padding-top: 0 !important;
+
+  .resume-item {
+    @media (max-width: 991px) {
+      flex-direction: column-reverse !important;
+    }
+  }
 }
 .recent-work-wrap {
   max-width: 75rem;
@@ -8,15 +14,33 @@ section.recent-work-section {
 .recent-work-images-wrap {
   width: 100%;
   background-color: $gray-100;
-  padding: 3rem;
+  background: linear-gradient(to top, #ffffff 0%, #f8f9fa 100%);
+  padding: 2rem 1rem;
+  @media (min-width: 992px) {
+    padding: 4rem 3rem 0.5rem;
+  }
 }
 .recent-work-images {
+  //margin-top: 2.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-auto-flow: row;
   grid-row-gap: 10px;
   grid-column-gap: 20px;
+  @media (min-width: 992px) {
+    margin-top: 2.5rem;
+  }
+
+  img {
+    box-shadow: 0 4px 16px #00000035;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 10px #00000055;
+    }
+  }
 
   .main-thumbnail {
     grid-column-start: 1;
