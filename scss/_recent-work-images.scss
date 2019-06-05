@@ -19,6 +19,14 @@ section.recent-work-section {
   @media (min-width: 992px) {
     padding: 4rem 3rem 0.5rem;
   }
+
+  h3 {
+    font-size: 2.5rem;
+
+    + .subheading {
+      color: $primary;
+    }
+  }
 }
 .recent-work-images {
   //margin-top: 2.5rem;

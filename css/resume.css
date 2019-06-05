@@ -5,17 +5,17 @@
  */
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   padding-top: 54px;
   color: #444;
-  line-height: 1.75rem;
+  line-height: 1.5rem;
   font-size: 1rem;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 17rem;
+    padding-left: 15rem;
   }
 }
 
@@ -25,22 +25,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: 'Halant', serif;
+  font-weight: 600;
   color: #343a40;
-  letter-spacing: -0.00391667em;
 }
 
 h1 {
+  font-weight: bold;
   font-size: 4rem;
   line-height: 1;
 }
 
-@media (min-width: 992px) {
-  h1 {
-    font-size: 5rem;
-  }
+h1 span {
+  display: block;
 }
 
 h2 {
@@ -48,24 +45,36 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.25rem;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+em {
+  color: #bb002d;
+  font-weight: 600;
 }
 
 p.lead {
   font-size: 1.4rem;
   color: #151515;
   margin-bottom: 1.4rem;
+  line-height: 1.5;
 }
 
 .subheading {
   text-transform: uppercase;
   font-weight: 600;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.4rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #868e96;
 }
 
 .intro {
   font-size: 1.125rem;
+  max-width: 650px;
 }
 
 .social-icons a {
@@ -113,7 +122,6 @@ p.lead {
 
 @media (min-width: 992px) {
   #sideNav {
-    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -124,14 +132,14 @@ p.lead {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 17rem;
+    width: 15rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: auto auto 0;
+    margin: 15rem auto 0;
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
@@ -157,7 +165,8 @@ p.lead {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 100%;
+    margin: 0 auto;
+    width: 76%;
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
@@ -240,6 +249,14 @@ section.recent-work-section {
   .recent-work-images-wrap {
     padding: 4rem 3rem 0.5rem;
   }
+}
+
+.recent-work-images-wrap h3 {
+  font-size: 2.5rem;
+}
+
+.recent-work-images-wrap h3 + .subheading {
+  color: #bb002d;
 }
 
 .recent-work-images {

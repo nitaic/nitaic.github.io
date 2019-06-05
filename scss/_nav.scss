@@ -14,7 +14,7 @@
 
 @media (min-width: 992px) {
   #sideNav {
-    text-align: center;
+    //text-align: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,7 +27,7 @@
     .navbar-brand {
       display: flex;
 
-      margin: auto auto 0;
+      margin: 15rem auto 0;
       padding: 0.5rem;
       .img-profile {
         max-width: 9rem;
@@ -35,6 +35,7 @@
         border: 0.3rem solid fade-out($white, 0.8);
       }
     }
+
     .navbar-collapse {
       display: flex;
       align-items: flex-start;
@@ -44,8 +45,9 @@
       margin-bottom: auto;
       .navbar-nav {
         flex-direction: column;
+        margin: 0 auto;
+        width: 76%;
 
-        width: 100%;
         .nav-item {
           display: block;
           .nav-link {

@@ -1,8 +1,13 @@
 // Mixins
 
 @mixin body-font {
-  font-family: 'Source Sans Pro', sans-serif;
+  //font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 @mixin heading-font {
-  font-family: 'Source Sans Pro', sans-serif;
+  //font-family: 'Source Sans Pro', sans-serif;
+  //font-family: 'Proza Libre', sans-serif;
+  //font-family: 'Domine', serif;
+  //font-family: 'Maven Pro', sans-serif;
+  font-family: 'Halant', serif;
 }
