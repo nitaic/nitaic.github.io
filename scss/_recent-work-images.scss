@@ -7,9 +7,18 @@ section.recent-work-section {
       flex-direction: column-reverse !important;
     }
   }
+
+  .work-title {
+    color: $black;
+  }
 }
 .recent-work-wrap {
   max-width: 75rem;
+  padding: 1rem;
+
+  @media (min-width: 992px) {
+    padding: 1.5rem 3rem 3rem;
+  }
 }
 .recent-work-images-wrap {
   width: 100%;
